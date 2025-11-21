@@ -27,4 +27,28 @@ function Search({returnedPokemon}: SearchProps) {
         console.error('There has been a problem with your fetch operation:', error);
       });
   };
-};
+
+  const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSearch(event.target.value);
+  }
+
+  const handleSearchSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    searchPokemon(search);
+    setSearch("");
+  }
+
+  return (
+    <form onSubmit={handleSearchSubmit}>
+      <input
+        type="text"
+        value={search}
+        onChange={handleSearchChange}
+        placeholder="Enter Pokémon name or ID"
+      />
+      <button type="submit">Add to Party</button>
+    </form>
+  );
+}
+
+export default Search;

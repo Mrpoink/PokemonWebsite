@@ -1,37 +1,32 @@
-import { useState } from 'react'
-import './App.css'
+import '../App.css'
 
-function App() {
-    const [pokemon_party_1, setPokemonParty_1] = useState([]);
-    const [pokemon_party_2, setPokemonParty_2] = useState([]);
+interface BattleProps {
+    pokemon_1: any;
+    pokemon_2: any;
+    }
+
+function Battle({ pokemon_1, pokemon_2 }: BattleProps) {
+
+    const doBattle = (pokemon_1: any, pokemon_2: any) => {
+
+        pokemon_1.stats.forEach((stat: any, index: number) => {
+            const statName = stat.stat.name;
+            const statValue1 = stat.base_stat;
+            const statValue2 = pokemon_2.stats[index].base_stat;
+            
+            console.log(`${statName}: Player 1 - ${statValue1}, Player 2 - ${statValue2}`);
+        });
+
+    }
 
     return (
-        <>
-            <h1>Pokemon Battle!!</h1>
-            <div style={{ display: 'flex', justifyContent: 'space-around' }}>
-                <div>
-                    <h2>Player 1 Party:</h2>
-                    <ul>
-                        {pokemon_party_1.map((pokemon: any, index: number) => (
-                            <li key={index}>
-                                {pokemon.name} (ID: {pokemon.id})
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-                <div>
-                    <h2>Player 2 Party:</h2>
-                    <ul>
-                        {pokemon_party_2.map((pokemon: any, index: number) => (
-                            <li key={index}>
-                                {pokemon.name} (ID: {pokemon.id})
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-            </div>
-        </>
-    )
+        <div>
+            <h2>Battle Component</h2>
+            {/* Battle logic will go here */}
+        </div>
+    );
+
+
 }
 
-export default App
+export default Battle

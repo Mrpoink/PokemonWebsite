@@ -1,0 +1,23 @@
+{
+  "name": "pokemonwebsite",
+  "version": "1.0.0",
+  "description": "Pokemon Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mrpoink/PokemonWebsite.git"
+  },
+  "keywords": [
+    "Pokemon",
+    "Website"
+  ],
+  "author": "Brandon Dean",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mrpoink/PokemonWebsite/issues"
+  },
+  "homepage": "https://github.com/Mrpoink/PokemonWebsite#readme"
+}

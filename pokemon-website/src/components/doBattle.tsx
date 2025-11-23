@@ -65,12 +65,40 @@ function Battle({ pokemon_1, pokemon_2 }: BattleProps) {
                 <div>
                     <h3>{pokemon_1.name}</h3>
                     <img src={pokemon_1.sprites.front_default} alt={pokemon_1.name} />
-                    <p>HP: {pokemonState_1.hp}</p>
-                    <p>Attack: {pokemonState_1.attack}</p>
-                    <p>Defense: {pokemonState_1.defense}</p>
-                    <p>Speed: {pokemonState_1.speed}</p>
-                    <p>Special Defense: {pokemonState_1.spdef}</p>
-                    <p>Special Attack: {pokemonState_1.spatk}</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Stat</th>
+                                <th>Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>HP</td>
+                                <td>{pokemonState_1.hp}</td>
+                            </tr>
+                            <tr>
+                                <td>Attack</td>
+                                <td>{pokemonState_1.attack}</td>
+                            </tr>
+                            <tr>
+                                <td>Defense</td>
+                                <td>{pokemonState_1.defense}</td>
+                            </tr>
+                            <tr>
+                                <td>Speed</td>
+                                <td>{pokemonState_1.speed}</td>
+                            </tr>
+                            <tr>
+                                <td>Special Defense</td>
+                                <td>{pokemonState_1.spdef}</td>
+                            </tr>
+                            <tr>
+                                <td>Special Attack</td>
+                                <td>{pokemonState_1.spatk}</td>
+                            </tr>
+                        </tbody>
+                    </table>
                     <h4>Moves:</h4>
                     <ul>
                         {pokemonState_1.selected_moves.map((move: any, index: number) => (
@@ -81,12 +109,40 @@ function Battle({ pokemon_1, pokemon_2 }: BattleProps) {
                 <div>
                     <h3>{pokemon_2.name}</h3>
                     <img src={pokemon_2.sprites.front_default} alt={pokemon_2.name} />
-                    <p>HP: {pokemonState_2.hp}</p>
-                    <p>Attack: {pokemonState_2.attack}</p>
-                    <p>Defense: {pokemonState_2.defense}</p>
-                    <p>Speed: {pokemonState_2.speed}</p>
-                    <p>Special Defense: {pokemonState_2.spdef}</p>
-                    <p>Special Attack: {pokemonState_2.spatk}</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Stat</th>
+                                <th>Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>HP</td>
+                                <td>{pokemonState_2.hp}</td>
+                            </tr>
+                            <tr>
+                                <td>Attack</td>
+                                <td>{pokemonState_2.attack}</td>
+                            </tr>
+                            <tr>
+                                <td>Defense</td>
+                                <td>{pokemonState_2.defense}</td>
+                            </tr>
+                            <tr>
+                                <td>Speed</td>
+                                <td>{pokemonState_2.speed}</td>
+                            </tr>
+                            <tr>
+                                <td>Special Defense</td>
+                                <td>{pokemonState_2.spdef}</td>
+                            </tr>
+                            <tr>
+                                <td>Special Attack</td>
+                                <td>{pokemonState_2.spatk}</td>
+                            </tr>
+                        </tbody>
+                    </table>
                     <h4>Moves:</h4>
                     <ul>
                         {pokemonState_2.selected_moves.map((move: any, index: number) => (

@@ -28,7 +28,8 @@ function App() {
 
   return (
     <>
-      <h1>Pokemon Battle!!</h1>
+      <h1>Pokemon Comparison!!</h1>
+      <p>Selected Pokemon are automatically calculated at level 50 for comparison with a random move list and random power</p>
       {!showBattle ? (
         <>
           <Search returnedPokemon={addPokemonToParty_1} />
@@ -75,7 +76,10 @@ function App() {
           </button>
         </>
       ) : (
-        <Battle pokemon_1={selectedPokemon_1} pokemon_2={selectedPokemon_2} />
+        <>
+          <Battle pokemon_1={selectedPokemon_1} pokemon_2={selectedPokemon_2} />
+          <button onClick={() => setShowBattle(false)}>Back to Selection</button>
+        </>
       )}
     </>
   )

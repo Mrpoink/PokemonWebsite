@@ -44,7 +44,7 @@ function Search({returnedPokemon}: SearchProps) {
         type="text"
         value={search}
         onChange={handleSearchChange}
-        placeholder="Enter Pokémon name or ID"
+        placeholder="Enter Pokemon name or ID"
       />
       <button type="submit">Add to Party</button>
     </form>
